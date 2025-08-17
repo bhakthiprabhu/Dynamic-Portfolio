@@ -54,7 +54,7 @@ A modern, responsive, and dynamic personal portfolio website built with **React*
 
 1. Start the development server:
    ```bash
-   npm start
+    npm run dev
    ```
 
 2. Open [http://localhost:3000](http://localhost:3000) in your browser.
