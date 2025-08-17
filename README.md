@@ -57,7 +57,7 @@ A modern, responsive, and dynamic personal portfolio website built with **React*
     npm run dev
    ```
 
-2. Open [http://localhost:3000](http://localhost:3000) in your browser.
+2. Open [http://localhost:5173/](http://localhost:5173/) in your browser.
 
 3. Configure the contact form with EmailJS:
    - Add your **Service ID**, **Template ID**, and **User ID** in `src/data/config.js`.
