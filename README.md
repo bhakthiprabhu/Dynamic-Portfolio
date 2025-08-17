@@ -35,12 +35,12 @@ A modern, responsive, and dynamic personal portfolio website built with **React*
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/bhakthiprabhu/Dynamic-Portfolio.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd portfolio
+   cd Dynamic-Portfolio
    ```
 
 3. Install dependencies:
