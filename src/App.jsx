@@ -19,9 +19,9 @@ function App() {
       </Helmet>
       <Navbar />
       <Hero />
+      <Projects />
       <About />
       <Experience />
-      <Projects />
       <Skills />
       <Education />
       <Contact />

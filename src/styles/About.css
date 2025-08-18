@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
 }
 
 .about-container {
@@ -40,26 +41,25 @@
 }
 
 .about-text h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   font-size: var(--font-2xl); /* default desktop size */
 }
 
 .about-text p {
   font-size: var(--font-base);
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
 .about-contact p,
 .about-contact a,
 .about-social a {
   font-size: var(--font-base);
+  margin: 0.2rem 0 1rem 0;
 }
 
 .about-social {
   display: flex;
   gap: 1rem;
-  margin: 0.5rem 0 1rem 0;
   flex-wrap: wrap; /* wrap icons if screen is too narrow */
   justify-content: flex-start;
 }

@@ -5,7 +5,6 @@
 ========================= */
 .experience-section {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
   color: var(--text);
 }
 

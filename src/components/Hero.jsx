@@ -5,36 +5,41 @@ import { motion } from "framer-motion";
 export default function Hero() {
   const [typedName, setTypedName] = useState("");
   const [index, setIndex] = useState(0);
-  const [forward, setForward] = useState(true); // for looping typing and deleting
+  const [forward, setForward] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timeout = setTimeout(() => {
       if (forward) {
-        setTypedName(hero.name.slice(0, index + 1));
-        setIndex((prev) => prev + 1);
-        if (index + 1 === hero.name.length) setForward(false);
+        if (index < hero.name.length) {
+          setTypedName(hero.name.slice(0, index + 1));
+          setIndex(index + 1);
+        } else {
+          setForward(false);
+        }
       } else {
-        setTypedName(hero.name.slice(0, index - 1));
-        setIndex((prev) => prev - 1);
-        if (index - 1 === 0) setForward(true);
+        if (index > 0) {
+          setTypedName(hero.name.slice(0, index - 1));
+          setIndex(index - 1);
+        } else {
+          setForward(true);
+        }
       }
-    }, 200); // typing speed
+    }, 200);
 
-    return () => clearInterval(interval);
-  }, [index, forward]);
+    return () => clearTimeout(timeout);
+  }, [index, forward]); // dependencies are fine here
 
   return (
     <section id="hero" className="hero-section">
       <div className="hero-container">
-        {/* Left Side - Text */}
         <div className="hero-text">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <span className="hero-hello">Hello, my name is</span> <br />
-            <span className="hero-name">{typedName}</span>
+            <span className="hero-hello">Hey there, I'm</span> <br />
+            <span className="hero-name">{typedName || "\u00A0"}</span>
           </motion.h1>
 
           <motion.p
@@ -64,7 +69,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Side - Image */}
         <motion.div
           className="hero-image"
           initial={{ opacity: 0, x: 50 }}

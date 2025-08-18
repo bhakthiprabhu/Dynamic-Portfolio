@@ -23,6 +23,9 @@
   --font-2xl: 2rem;     /* 32px */
   --font-3xl: 2.5rem;   /* 40px */
   --font-4xl: 3rem;     /* 48px */
+
+  --font-heading: 'Poppins', 'Playfair Display', 'Inter', sans-serif;
+  --font-body: 'Roboto', 'Lora', sans-serif;
 }
 
 body.dark {
@@ -41,13 +44,17 @@ body.dark {
    Global Styles
 ========================= */
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  font-size: var(--font-base); /* default 16px */
+  font-family: var(--font-body);
+  font-size: var(--font-base);
   background: var(--bg);
   color: var(--text);
-  scroll-behavior: smooth;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text);
+  margin: 0 0 1rem 0;
 }
 
 h1 {
@@ -71,6 +78,7 @@ h4 {
 }
 
 p {
+  font-family: var(--font-body);
   font-size: var(--font-base);
   margin-bottom: 1rem;
 }
