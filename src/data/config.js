@@ -1,9 +1,10 @@
 export const hero = {
-  name: "Your Name",
+  name: "YOUR NAME ",
   tagline: "Full-Stack Developer & Designer",
   ctaText: "Contact Me",
   ctaLink: "#contact",
   avatar: "/assets/images/avatar1.jpg",
+  bio: "A brief introduction about yourself.I’m a passionate full-stack developer with expertise in React, Node.js, and modern web technologies."
 };
 
 
