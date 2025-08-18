@@ -1,0 +1,165 @@
+@import './global.css';
+
+/* =========================
+   Hero Section Layout
+========================= */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
+  position: relative;
+  padding: 3rem 2rem;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Left Column */
+.hero-text {
+  flex: 1;
+}
+
+.hero-role {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-text h1 {
+  font-size: var(--font-2xl);
+  margin: 1rem 0;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.hero-text h1 .highlight {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.hero-text p {
+  font-size: var(--font-md);
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--secondary);
+}
+
+.btn-secondary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Right Column - Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary);
+  border-radius: 2rem 0 2rem 0;
+  padding: 2rem;
+}
+
+.hero-avatar {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+  .hero-container {
+    gap: 1.5rem; /* slightly smaller gap on tablets */
+  }
+
+  .hero-text h1 {
+    font-size: var(--font-2xl);
+  }
+
+  .hero-text p {
+    font-size: var(--font-base);
+  }
+
+  .hero-buttons {
+    gap: 0.8rem; /* reduce space between buttons */
+  }
+
+  .btn-primary, .btn-secondary {
+    font-size: var(--font-sm);
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1rem; /* smaller vertical spacing on mobile */
+  }
+
+  .hero-image {
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: var(--font-xl);
+    margin: 0.8rem 0; /* reduce margin for better balance */
+  }
+
+  .hero-text p {
+    font-size: var(--font-sm);
+    margin-bottom: 1.5rem; /* less spacing below paragraph */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* stack buttons on mobile */
+    gap: 0.6rem; /* reduce spacing */
+    align-items: center;
+  }
+
+  .btn-primary, .btn-secondary {
+    font-size: var(--font-xs);
+    padding: 0.5rem 1rem;
+    width: 80%; /* optional: make buttons slightly wider to fill space */
+    max-width: 250px;
+  }
+}

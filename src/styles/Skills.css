@@ -1,0 +1,134 @@
+@import './global.css';
+/* =========================
+   Skills Section
+========================= */
+.skills-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
+}
+
+.skills-section .section-title {
+  text-align: center;
+  font-size: var(--font-2xl); /* use global variable */
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+/* Grid layout for skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem; /* global spacing variable can also be used if defined */
+  justify-items: center;
+}
+
+/* Skill card */
+.skill-card {
+  background: var(--card-bg);
+  padding: 1rem 0.5rem; /* consider using --spacing if available */
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: 140px; /* keeps cards uniform for many skills */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px var(--card-shadow);
+}
+
+.skill-card h4 {
+  margin: 0.5rem 0 0.25rem 0;
+  font-size: var(--font-md); /* updated with global variable */
+  color: var(--text);
+}
+
+.skill-card p {
+  font-size: var(--font-sm); /* updated with global variable */
+  margin: 0;
+}
+
+/* Icon in skill card */
+.skill-card svg {
+  color: var(--primary); /* sets the icon color to the theme's primary */
+  font-size: var(--font-2xl); /* optional size for icons */
+  transition: color 0.3s;
+}
+
+/* Change icon color on hover */
+.skill-card:hover svg {
+  color: var(--secondary);
+}
+
+/* =========================
+   Skills Section Responsive
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .skills-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .skills-section .section-title {
+    font-size: var(--font-2xl);
+    margin-bottom: 1.8rem;
+  }
+
+  .skills-grid {
+    gap: 1.2rem;
+  }
+
+  .skill-card {
+    max-width: 130px;
+    padding: 0.9rem 0.4rem;
+  }
+
+  .skill-card h4 {
+    font-size: var(--font-sm);
+  }
+
+  .skill-card p {
+    font-size: var(--font-xs);
+  }
+
+  .skill-card svg {
+    font-size: var(--font-lg);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 1rem;
+  }
+
+  .skills-section .section-title {
+    font-size: var(--font-xl);
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-card {
+    max-width: 120px;
+    padding: 0.8rem 0.4rem;
+  }
+
+  .skill-card h4 {
+    font-size: var(--font-xs);
+    margin-bottom: 0.2rem;
+  }
+
+  .skill-card p {
+    font-size: var(--font-xxs);
+  }
+
+  .skill-card svg {
+    font-size: var(--font-md);
+  }
+}

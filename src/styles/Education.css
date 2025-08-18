@@ -1,0 +1,215 @@
+@import './global.css';
+/* =========================
+   Education Timeline
+========================= */
+.education-section {
+  padding: 4rem 2rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.education-section .section-title {
+  text-align: center;
+  font-size: var(--font-2xl); /* global variable */
+  margin-bottom: 3rem;
+  color: var(--text);
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1.25rem; /* 20px → scalable */
+  border-left: 3px solid var(--primary);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.625rem; /* -10px */
+  top: 0.5rem;     /* 8px */
+  width: 1rem;     /* 16px */
+  height: 1rem;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+}
+
+.timeline-content {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0.25rem 0.625rem var(--card-shadow); /* 4px 10px */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-0.25rem); /* -4px */
+  box-shadow: 0 0.5rem 1.25rem var(--card-shadow); /* 8px 20px */
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: var(--font-xl);
+  color: var(--primary);
+}
+
+.timeline-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--font-lg);
+  color: var(--secondary);
+}
+
+.edu-year {
+  display: block;
+  font-size: var(--font-sm);
+  font-style: italic;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: var(--font-base);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Large Tablets / Small Desktops */
+@media (max-width: 1024px) {
+  .education-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .education-section .section-title {
+    font-size: var(--font-2xl);
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-dot {
+    left: -0.5rem;
+    top: 0.4rem;
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .timeline-content {
+    padding: 0.85rem 1.2rem;
+  }
+
+  .timeline-content h3 {
+    font-size: var(--font-lg);
+  }
+
+  .timeline-content h4 {
+    font-size: var(--font-md);
+  }
+
+  .edu-year {
+    font-size: var(--font-xs);
+  }
+
+  .timeline-content p {
+    font-size: var(--font-sm);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 3rem 1rem;
+  }
+
+  .education-section .section-title {
+    font-size: var(--font-xl);
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 0.8rem;
+  }
+
+  .timeline-dot {
+    left: -0.45rem;
+    top: 0.35rem;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .timeline-content {
+    padding: 0.7rem 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: var(--font-md);
+  }
+
+  .timeline-content h4 {
+    font-size: var(--font-sm);
+  }
+
+  .edu-year {
+    font-size: var(--font-xxs);
+  }
+
+  .timeline-content p {
+    font-size: var(--font-xs);
+  }
+}
+
+/* Extra Small Screens (≤480px) */
+@media (max-width: 480px) {
+  .education-section {
+    padding: 2.5rem 0.8rem;
+  }
+
+  .education-section .section-title {
+    font-size: var(--font-xl);
+    margin-bottom: 1.2rem;
+  }
+
+  .timeline {
+    padding-left: 0.5rem;
+  }
+
+  .timeline-dot {
+    left: -0.35rem;
+    top: 0.3rem;
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  .timeline-content {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .timeline-content h3 {
+    font-size: var(--font-sm);
+  }
+
+  .timeline-content h4 {
+    font-size: var(--font-xs);
+  }
+
+  .edu-year {
+    font-size: var(--font-xxs);
+  }
+
+  .timeline-content p {
+    font-size: var(--font-xxs);
+  }
+}

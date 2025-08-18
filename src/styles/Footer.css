@@ -1,0 +1,84 @@
+@import './global.css';
+/* =========================
+   Footer
+========================= */
+.footer {
+  padding: 1rem 0rem; /* reduced padding */
+  color: var(--text);
+  text-align: center;
+  border-top: 1px solid var(--navbar-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-link {
+  font-size: 1.4rem;
+  color: var(--primary);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--secondary);
+  transform: scale(1.1);
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+/* =========================
+   Responsive adjustments
+========================= */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0.5rem 0rem;
+  }
+
+  .footer-link {
+    font-size: 1.3rem;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem 0rem;
+  }
+
+  .footer-link {
+    font-size: 1.2rem;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.5rem 0rem;
+  }
+
+  .footer-socials {
+    gap: 0.8rem;
+  }
+
+  .footer-link {
+    font-size: 1.1rem;
+  }
+
+  .footer-text {
+    font-size: 0.7rem;
+  }
+}
