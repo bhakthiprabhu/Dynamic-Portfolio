@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
   background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
   color: var(--text);
 }
