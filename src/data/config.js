@@ -1,26 +1,9 @@
 export const hero = {
-  name: "YOUR NAME ",
-  tagline: "Full-Stack Developer & Designer",
-  ctaText: "Contact Me",
-  ctaLink: "#contact",
-  avatar: "/assets/images/avatar1.jpg",
-  bio: "A brief introduction about yourself.I’m a passionate full-stack developer with expertise in React, Node.js, and modern web technologies."
-};
-
-
-export const about = {
-  name: "John Doe",
-  title: "Full-Stack Developer",
-  bio: "A short bio (who you are, what you do, career goals).I’m a passionate full-stack developer with expertise in React, Node.js, and modern web technologies. I love building scalable web applications and creating seamless user experiences. Always eager to learn new technologies and improve my craft.",
-  avatar: "/assets/images/avatar.jpg",
+  name: "Your Name",
+  roles: ["Backend Developer", "Frontend Developer", "Full Stack Enthusiast"],
   resume: "/assets/files/resume.pdf",
-  location: "San Francisco, CA, USA",
-  email: "john.doe@example.com",
-  phone: "+1 (123) 456-7890",
-  social: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-  },
+  avatar: "/assets/images/avatar.jpg",
+  bio: "A short bio (who you are, what you do, career goals).I’m a passionate full-stack developer with expertise in React, Node.js, and modern web technologies. I love building scalable web applications and creating seamless user experiences. Always eager to learn new technologies and improve my craft."
 };
 
 export const experience = [
@@ -51,8 +34,8 @@ export const projects = [
   {
     title: "Portfolio Website",
     description: "A modern portfolio built with React and custom CSS.",
-    tech: ["React", "CSS", "Framer Motion", "Figma"],
-    github: "https://github.com/johndoe/portfolio",
+    tech: ["React", "CSS", "Framer Motion"],
+    github: "https://github.com/yourusername/Dynamic-Portfolio",
     demo: "https://johndoe.dev",
     image: "/assets/images/project1.png",
   },
@@ -60,7 +43,7 @@ export const projects = [
     title: "E-commerce App",
     description: "Full-stack e-commerce platform using Node.js and React.",
     tech: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/johndoe/ecommerce",
+    github: "https://github.com/yourusername/ecommerce",
     demo: "https://ecommerce.johndoe.dev",
     image: "/assets/images/project2.png",
   },
@@ -68,7 +51,7 @@ export const projects = [
     title: "AI project",
     description: "Full-stack e-commerce platform using Node.js and React.",
     tech: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/johndoe/ecommerce",
+    github: "https://github.com/yourusername/ecommerce",
     demo: "https://ecommerce.johndoe.dev",
     image: "/assets/images/project2.png",
   },
@@ -76,7 +59,7 @@ export const projects = [
     title: "ML project",
     description: "Full-stack e-commerce platform using Node.js and React.",
     tech: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/johndoe/ecommerce",
+    github: "https://github.com/yourusername/ecommerce",
     demo: "https://ecommerce.johndoe.dev",
     image: "/assets/images/project2.png",
   },
@@ -84,67 +67,48 @@ export const projects = [
     title: "DS project",
     description: "Full-stack e-commerce platform using Node.js and React.",
     tech: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/johndoe/ecommerce",
-    demo: "https://ecommerce.johndoe.dev",
-    image: "/assets/images/project2.png",
-  },
-  {
-    title: "CS project",
-    description: "Full-stack e-commerce platform using Node.js and React.",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/johndoe/ecommerce",
+    github: "https://github.com/yourusername/ecommerce",
     demo: "https://ecommerce.johndoe.dev",
     image: "/assets/images/project2.png",
   },
 ];
 
 export const skills = [
-  { name: "React", type: "frontend", level: "Advanced", icon: "SiReact" },
-  { name: "Node.js", type: "backend", level: "Intermediate", icon: "SiNodedotjs" },
-  { name: "CSS", type: "frontend", level: "Advanced", icon: "SiCss3" },
-  { name: "Figma", type: "tool", level: "Intermediate", icon: "SiFigma" },
-  { name: "JavaScript", type: "frontend", level: "Advanced", icon: "SiJavascript" },
-  { name: "TypeScript", type: "frontend", level: "Intermediate", icon: "SiTypescript" },
-  { name: "HTML5", type: "frontend", level: "Advanced", icon: "SiHtml5" },
+  { name: "React", type: "frontend", level: "Intermediate", icon: "SiReact" },
+  { name: "React Native", type: "frontend", level: "Intermediate", icon: "SiReact" },
   { name: "Next.js", type: "frontend", level: "Intermediate", icon: "SiNextdotjs" },
+  { name: "Node.js", type: "backend", level: "Intermediate", icon: "SiNodedotjs" },
   { name: "Express.js", type: "backend", level: "Intermediate", icon: "SiExpress" },
-  { name: "MongoDB", type: "backend", level: "Intermediate", icon: "SiMongodb" },
-  { name: "PostgreSQL", type: "backend", level: "Intermediate", icon: "SiPostgresql" },
-  { name: "Tailwind CSS", type: "frontend", level: "Intermediate", icon: "SiTailwindcss" },
-  { name: "Sass", type: "frontend", level: "Intermediate", icon: "SiSass" },
-  { name: "Git", type: "tool", level: "Advanced", icon: "SiGit" },
-  { name: "GitHub", type: "tool", level: "Advanced", icon: "SiGithub" },
-  { name: "Docker", type: "tool", level: "Intermediate", icon: "SiDocker" },
-  { name: "Redux", type: "frontend", level: "Intermediate", icon: "SiRedux" },
   { name: "GraphQL", type: "backend", level: "Intermediate", icon: "SiGraphql" },
   { name: "Python", type: "backend", level: "Intermediate", icon: "SiPython" },
-  { name: "VS Code", type: "tool", level: "Advanced", icon: "SiVisualstudiocode" }
+  { name: "MongoDB", type: "backend", level: "Intermediate", icon: "SiMongodb" },
+  { name: "PostgreSQL", type: "backend", level: "Intermediate", icon: "SiPostgresql" },
+  { name: "JWT", type: "backend", level: "Intermediate", icon: "SiJsonwebtokens" },
+  { name: "Azure Functions", type: "backend", level: "Intermediate", icon: "VscAzure" },
+  { name: "Azure Search", type: "backend", level: "Intermediate", icon: "VscAzure" },
+  { name: "Azure Blob", type: "backend", level: "Intermediate", icon: "VscAzure" },
+  { name: "PowerApps", type: "tool", level: "Intermediate", icon: "SiMicrosoftpowerapps" },
+  { name: "PowerAutomate", type: "tool", level: "Intermediate", icon: "SiMicrosoftpowerautomate" },
+  { name: "PCF", type: "tool", level: "Intermediate", icon: "SiMicrosoftpowerapps" },
+  { name: "Jest", type: "tool", level: "Intermediate", icon: "SiJest" },
+  { name: "Git", type: "tool", level: "Advanced", icon: "SiGit" },
+  { name: "GitHub", type: "tool", level: "Advanced", icon: "SiGithub" },
+  { name: "VS Code", type: "tool", level: "Advanced", icon: "VscVscode" }
 ];
+
 
 export const education = [
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "XYZ University",
     year: "2021 - 2025",
-    description: "Focused on software engineering, web development, and AI.",
   },
   {
     degree: "Higher Secondary Education",
     institution: "ABC PU College",
     year: "2019 - 2021",
-    description: "Studied Physics, Chemistry, Mathematics, and Computer Science.",
   },
 ];
-
-
-export const contact = {
-  email: "john@example.com",
-  phone: "+123456789",
-  socials: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-  },
-};
 
 export const emailConfig = {
   serviceID: "<YOUR_SERVICE_ID>",
@@ -154,4 +118,8 @@ export const emailConfig = {
 
 export const footer = {
   text: "Your Name. All rights reserved.",
+  socials: {
+    github: "https://github.com/yourusername",
+    linkedin: "https://linkedin.com/in/yourusername",
+  },
 };
