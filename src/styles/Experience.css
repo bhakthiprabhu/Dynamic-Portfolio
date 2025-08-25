@@ -6,6 +6,7 @@
 .experience-section {
   padding: 4rem 2rem;
   color: var(--text);
+  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
 }
 
 .experience-section .section-title {
@@ -28,19 +29,17 @@
 }
 
 /* Timeline container */
+/* Timeline container - widen overall space */
 .timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-left: 20px;
-  border-left: 3px solid var(--primary);
+  max-width: 950px; /* was 800px */
+  padding-left: 25px; /* a little extra spacing for the line */
 }
 
 /* Timeline item */
 .timeline-item {
   position: relative;
   margin-bottom: 2rem;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
 .timeline-dot {
@@ -54,12 +53,11 @@
   border: 2px solid var(--bg);
 }
 
+/* Timeline content - give inner box more room */
 .timeline-content {
-  background: var(--card-bg);
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px var(--card-shadow);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1.2rem 2rem; /* slightly larger inside spacing */
+  max-width: 100%; /* allow full width inside container */
+  text-align: justify;
 }
 
 .timeline-content:hover {

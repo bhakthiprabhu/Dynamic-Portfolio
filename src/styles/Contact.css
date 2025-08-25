@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
   color: var(--text);
 }
 
@@ -50,50 +49,26 @@
 }
 
 .contact-form button {
-  align-self: flex-start;
+  align-self: stretch;   /* makes button take full width of parent */
+  width: 100%;           /* ensures consistency */
   background: var(--primary);
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.9rem 1.5rem;
   border-radius: 0.625rem;
   border: none;
   cursor: pointer;
   font-weight: 600;
   font-size: var(--font-md);
   transition: all 0.3s ease;
-  box-shadow: 0 0.25rem 0.625rem var(--card-shadow); /* 4px 10px */
+  box-shadow: 0 0.25rem 0.625rem var(--card-shadow);
+  text-align: center;
 }
+
 
 .contact-form button:hover {
   background: var(--secondary);
-  transform: translateY(-0.125rem); /* -2px */
-  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); /* 4px 15px */
-}
-
-/* Social Links */
-.socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-2xl);
-  color: var(--primary);
-  background: var(--card-bg);
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  color: var(--secondary);
-  transform: scale(1.1);
-  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.15);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
 /* =========================
@@ -111,6 +86,7 @@
   .contact-form button {
     font-size: var(--font-sm);
     padding: 0.7rem 1.2rem;
+    max-width: 100%;
   }
 }
 
@@ -130,6 +106,7 @@
   .contact-form button {
     width: 100%;
     text-align: center;
+    max-width: 100%;
   }
 
   .socials {
@@ -157,12 +134,9 @@
   .contact-form button {
     font-size: var(--font-sm);
     padding: 0.65rem 1rem;
+    max-width: 100%;
   }
 
-  .social-link {
-    font-size: var(--font-xl);
-    padding: 0.4rem;
-  }
 }
 
 /* =========================

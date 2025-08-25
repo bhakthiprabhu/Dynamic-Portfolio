@@ -3,31 +3,37 @@ import { hero } from "../data/config";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const [typedName, setTypedName] = useState("");
+  const [typedText, setTypedText] = useState("");
   const [index, setIndex] = useState(0);
   const [forward, setForward] = useState(true);
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  const roles = hero.roles || [hero.tagline]; 
 
   useEffect(() => {
+    const currentRole = roles[roleIndex];
+
     const timeout = setTimeout(() => {
       if (forward) {
-        if (index < hero.name.length) {
-          setTypedName(hero.name.slice(0, index + 1));
+        if (index < currentRole.length) {
+          setTypedText(currentRole.slice(0, index + 1));
           setIndex(index + 1);
         } else {
           setForward(false);
         }
       } else {
         if (index > 0) {
-          setTypedName(hero.name.slice(0, index - 1));
+          setTypedText(currentRole.slice(0, index - 1));
           setIndex(index - 1);
         } else {
           setForward(true);
+          setRoleIndex((prev) => (prev + 1) % roles.length); // go to next role
         }
       }
-    }, 200);
+    }, 150);
 
     return () => clearTimeout(timeout);
-  }, [index, forward]); // dependencies are fine here
+  }, [index, forward, roleIndex, roles]);
 
   return (
     <section id="hero" className="hero-section">
@@ -39,7 +45,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
           >
             <span className="hero-hello">Hey there, I'm</span> <br />
-            <span className="hero-name">{typedName || "\u00A0"}</span>
+            <span className="hero-name">{hero.name}</span>
           </motion.h1>
 
           <motion.p
@@ -48,7 +54,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            {hero.tagline}
+            {typedText || "\u00A0"}
           </motion.p>
 
           {hero.bio && (
@@ -63,8 +69,9 @@ export default function Hero() {
           )}
 
           <div className="hero-buttons">
-            <a href={hero.ctaLink} className="btn-primary">
-              {hero.ctaText}
+            {/* Updated button to Download Resume */}
+             <a href={hero.resume} download className="btn-primary">
+              Download Resume
             </a>
           </div>
         </div>

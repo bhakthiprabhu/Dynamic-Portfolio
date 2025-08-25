@@ -2,17 +2,18 @@
    Root Variables & Fonts
 ========================= */
 :root {
-  --primary: #0a66c2;        /* Professional blue */
-  --secondary: #20c997;      /* Teal accent */
-  --accent: #ff6b6b;         /* Coral red for highlights */
-  --bg: #ffffff;             /* White background */
-  --text: #212529;           /* Dark text */
-  --card-bg: #f8f9fa;        /* Light gray for cards */
-  --card-shadow: rgba(0,0,0,0.08);
-  --navbar-border: rgba(10, 102, 194, 0.3);
-  --hero-gradient-end: rgba(32, 201, 151, 0.15); /* teal tint */
+  --primary: #a855f7;        /* Vibrant purple accent */
+  --secondary: #f472b6;      /* Soft pink highlight */
+  --accent: #ec4899;         /* Magenta accent */
+  --bg: #0a0a12;             /* Deep navy/black background */
+  --text: #f1f1f5;           /* Light gray-white text */
+  --card-bg: #181826;        /* Dark indigo card background */
+  --card-shadow: rgba(0,0,0,0.4);
+  --navbar-border: rgba(168, 85, 247, 0.4);
+  --hero-gradient-end: rgba(236, 72, 153, 0.1); /* pink tint */
 
   /* Font Sizes (scalable system) */
+  --font-xxxs: 0.5rem;    /* 8px */
   --font-xxs: 0.625rem;  /* 10px */
   --font-xs: 0.75rem;   /* 12px */
   --font-sm: 0.875rem;  /* 14px */
@@ -24,20 +25,20 @@
   --font-3xl: 2.5rem;   /* 40px */
   --font-4xl: 3rem;     /* 48px */
 
-  --font-heading: 'Poppins', 'Playfair Display', 'Inter', sans-serif;
+  --font-heading: 'Poppins', 'Inter', 'Playfair Display', sans-serif;
   --font-body: 'Roboto', 'Lora', sans-serif;
 }
 
 body.dark {
-  --bg: #121212;
-  --text: #e9ecef;
-  --primary: #339af0;
-  --secondary: #38d9a9;
-  --accent: #ff8787;
-  --card-bg: #1f1f1f;
-  --card-shadow: rgba(0,0,0,0.25);
-  --navbar-border: rgba(51, 154, 240, 0.3);
-  --hero-gradient-end: rgba(56, 217, 169, 0.15);
+  --bg: #050510;
+  --text: #e2e8f0;
+  --primary: #c084fc;
+  --secondary: #f9a8d4;
+  --accent: #f472b6;
+  --card-bg: #12121d;
+  --card-shadow: rgba(0,0,0,0.6);
+  --navbar-border: rgba(192, 132, 252, 0.3);
+  --hero-gradient-end: rgba(249, 168, 212, 0.12);
 }
 
 /* =========================
@@ -94,30 +95,30 @@ section {
 
 a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--secondary);
   font-size: var(--font-base);
   transition: color 0.3s;
 }
 
 a:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 button, .btn, .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
   font-size: var(--font-md);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px var(--card-shadow);
+  box-shadow: 0 4px 12px var(--card-shadow);
 }
 
 button:hover, .btn:hover, .btn-primary:hover {
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
   color: #fff;
   transform: translateY(-2px);
 }

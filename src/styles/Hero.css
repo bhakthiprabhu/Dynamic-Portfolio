@@ -9,16 +9,17 @@
   justify-content: center;
   background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
   position: relative;
-  min-height: 70vh; /* reduced from 100vh */
-  padding: 2rem 1.5rem; /* smaller padding */
+  min-height: 70vh;
+  padding: 2rem 0; /* ✅ remove left/right padding */
 }
 
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 100vh;
+  max-width: 1200px; /* ✅ use px or % instead of vh */
   width: 100%;
+  padding: 0 1rem;   /* optional small padding */
 }
 
 /* Left Column */
@@ -45,18 +46,24 @@
 }
 
 .hero-tagline {
-  font-size: var(--font-lg);
-  color: var(--text-light);
-  margin-top: 0.5rem; /* control exact space you want */
+  font-family: "Edu NSW ACT Cursive", cursive; /* ✅ playful / handwritten vibe */
+  font-size: var(--font-xl);
+  font-weight: 600;
+  color: var(--primary); /* ✅ highlight color */
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* subtle depth */
 }
 
 
 .hero-bio {
+  font-family: "Roboto", sans-serif;
   font-size: var(--font-md); /* for bio text */
   color: var(--text-light);
   margin-bottom: 1rem;
-  max-width: 500px;
+  max-width: 650px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 /* Buttons */
@@ -91,24 +98,26 @@
 }
 
 .hero-image {
-  margin-top:50px;
+  margin-top: 50px;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  backdrop-filter: none;
+  border: none;
 }
 
 .hero-avatar {
   width: 100%;
   max-width: 400px;
-  border-radius: 1rem;
+  border-radius: 1rem; /* keep soft rounded edges on image */
   object-fit: cover;
+  box-shadow: none; /* just in case */
 }
+
 
 
 /* =========================

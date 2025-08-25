@@ -1,18 +1,19 @@
 @import './global.css';
+
 /* =========================
    Education Timeline
 ========================= */
 .education-section {
   padding: 4rem 2rem;
-  background: var(--bg);
+  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
   color: var(--text);
 }
 
 .education-section .section-title {
   text-align: center;
-  font-size: var(--font-2xl); /* global variable */
+  font-size: var(--font-2xl);
   margin-bottom: 3rem;
-  color: var(--text);
+  color: var(--primary); /* use accent instead of plain text */
 }
 
 /* Timeline container */
@@ -20,7 +21,7 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  padding-left: 1.25rem; /* 20px → scalable */
+  padding-left: 1.25rem;
   border-left: 3px solid var(--primary);
 }
 
@@ -33,9 +34,9 @@
 
 .timeline-dot {
   position: absolute;
-  left: -0.625rem; /* -10px */
-  top: 0.5rem;     /* 8px */
-  width: 1rem;     /* 16px */
+  left: -0.625rem;
+  top: 0.5rem;
+  width: 1rem;
   height: 1rem;
   background: var(--primary);
   border-radius: 50%;
@@ -46,53 +47,57 @@
   background: var(--card-bg);
   padding: 1rem 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0.25rem 0.625rem var(--card-shadow); /* 4px 10px */
+  box-shadow: 0 0.25rem 0.625rem var(--card-shadow);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .timeline-content:hover {
-  transform: translateY(-0.25rem); /* -4px */
-  box-shadow: 0 0.5rem 1.25rem var(--card-shadow); /* 8px 20px */
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.25rem var(--card-shadow);
 }
 
 .timeline-content h3 {
   margin: 0 0 0.25rem 0;
   font-size: var(--font-xl);
   color: var(--primary);
+  font-weight: 600;
 }
 
 .timeline-content h4 {
   margin: 0 0 0.5rem 0;
-  font-size: var(--font-lg);
-  color: var(--secondary);
+  font-size: var(--font-base);
+  color: var(--text); /* more readable than secondary */
+  font-weight: 500;
 }
 
 .edu-year {
   display: block;
   font-size: var(--font-sm);
   font-style: italic;
-  color: var(--secondary);
+  color: var(--font-base);
   margin-bottom: 0.5rem;
+  opacity: 0.8;
 }
 
 .timeline-content p {
   font-size: var(--font-base);
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
+  color: var(--text);
 }
 
 /* =========================
    Responsive Design
 ========================= */
 
-/* Large Tablets / Small Desktops */
+/* Tablets */
 @media (max-width: 1024px) {
   .education-section {
     padding: 3.5rem 1.5rem;
   }
 
   .education-section .section-title {
-    font-size: var(--font-2xl);
+    font-size: var(--font-xl);
     margin-bottom: 2rem;
   }
 
@@ -116,7 +121,7 @@
   }
 
   .timeline-content h4 {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .edu-year {
@@ -135,7 +140,7 @@
   }
 
   .education-section .section-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-lg);
     margin-bottom: 1.5rem;
   }
 
@@ -159,7 +164,7 @@
   }
 
   .timeline-content h4 {
-    font-size: var(--font-sm);
+    font-size: var(--font-xs);
   }
 
   .edu-year {
@@ -171,14 +176,14 @@
   }
 }
 
-/* Extra Small Screens (≤480px) */
+/* Extra Small (≤480px) */
 @media (max-width: 480px) {
   .education-section {
     padding: 2.5rem 0.8rem;
   }
 
   .education-section .section-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-md);
     margin-bottom: 1.2rem;
   }
 
@@ -202,7 +207,7 @@
   }
 
   .timeline-content h4 {
-    font-size: var(--font-xs);
+    font-size: var(--font-xxs);
   }
 
   .edu-year {

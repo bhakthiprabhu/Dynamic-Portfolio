@@ -12,16 +12,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(240, 244, 248, 0.85);
+  background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
   backdrop-filter: blur(10px);
   z-index: 100;
   box-sizing: border-box;
   border-bottom: 1px solid var(--navbar-border);
 }
 
+/* Logo + Links share same color */
 .nav-logo {
   font-weight: bold;
-  font-size: var(--font-lg); /* was 1.2rem */
+  font-size: var(--font-lg);
   color: var(--primary);
 }
 
@@ -32,13 +33,14 @@
 
 .nav-right a {
   font-weight: 500;
-  font-size: var(--font-base); /* default link size */
+  font-size: var(--font-base);
+  color: var(--primary); 
   transition: color 0.3s;
   white-space: nowrap;
 }
 
 .nav-right a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .hamburger {
@@ -56,25 +58,35 @@
     left: 0;
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
     background: var(--bg);
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
+    justify-content: center;   
+    align-items: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
   }
 
   /* When menu is open */
   .nav-right.open {
     max-height: 100vh;
-    opacity: 1;
-    padding: 1rem 0;
+    opacity: 0.90;
   }
 
   .nav-right a {
-    font-size: var(--font-base); /* same as desktop */
-    padding: 0.75rem 0;
+    font-size: var(--font-sm);
     width: 100%;
+    text-align: center;
+  }
+
+  .nav-right a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-logo {
+    font-size: var(--font-md); /* ✅ slightly smaller logo in mobile */
     text-align: center;
   }
 

@@ -12,7 +12,6 @@ export default function Education() {
               <h3>{edu.degree}</h3>
               <h4>{edu.institution}</h4>
               <span className="edu-year">{edu.year}</span>
-              <p>{edu.description}</p>
             </div>
           </div>
         ))}

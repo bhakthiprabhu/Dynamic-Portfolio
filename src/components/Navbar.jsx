@@ -14,7 +14,6 @@ export default function Navbar() {
 
       {/* Desktop / larger screens */}
       <div className={`nav-right ${isOpen ? "open" : ""}`}>
-        <a href="#about" onClick={() => setIsOpen(false)}>About</a>
         <a href="#experience" onClick={() => setIsOpen(false)}>Experience</a>
         <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
         <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
