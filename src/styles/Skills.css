@@ -8,8 +8,8 @@
 
 .skills-section .section-title {
   text-align: center;
-  font-size: var(--font-2xl); /* use global variable */
-  margin-bottom: 2rem;
+  font-size: var(--font-2xl);
+  margin-bottom: 3rem;
   color: var(--text);
 }
 
@@ -71,7 +71,7 @@
   }
 
   .skills-section .section-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-2xl);
     margin-bottom: 1.8rem;
   }
 
@@ -104,7 +104,7 @@
   }
 
   .skills-section .section-title {
-    font-size: var(--font-lg);
+    font-size: var(--font-xl);
     margin-bottom: 1.2rem;
   }
 

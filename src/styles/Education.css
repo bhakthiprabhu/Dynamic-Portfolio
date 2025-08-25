@@ -6,14 +6,13 @@
 .education-section {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, var(--bg), var(--hero-gradient-end));
-  color: var(--text);
 }
 
 .education-section .section-title {
   text-align: center;
   font-size: var(--font-2xl);
   margin-bottom: 3rem;
-  color: var(--primary); /* use accent instead of plain text */
+  color: var(--text);
 }
 
 /* Timeline container */
@@ -97,7 +96,7 @@
   }
 
   .education-section .section-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-2xl);
     margin-bottom: 2rem;
   }
 
@@ -140,7 +139,7 @@
   }
 
   .education-section .section-title {
-    font-size: var(--font-lg);
+    font-size: var(--font-xl);
     margin-bottom: 1.5rem;
   }
 
@@ -183,7 +182,7 @@
   }
 
   .education-section .section-title {
-    font-size: var(--font-md);
+    font-size: var(--font-xl);
     margin-bottom: 1.2rem;
   }
 

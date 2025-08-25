@@ -10,7 +10,7 @@
 .section-title {
   text-align: center;
   font-size: var(--font-2xl);
-  margin: 0 0 2rem 0;
+  margin-bottom: 3rem;
   color: var(--text);
 }
 
@@ -124,7 +124,7 @@
 /* Tablets */
 @media (max-width: 1024px) {
   .section-title {
-    font-size: var(--font-xl);
+    font-size: var(--font-2xl);
     margin-bottom: 1.8rem;
   }
 
@@ -178,7 +178,7 @@
   }
 
   .section-title {
-    font-size: var(--font-lg);
+    font-size: var(--font-xl);
     margin-bottom: 1.2rem;
   }
 
